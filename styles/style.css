@@ -19,15 +19,9 @@ body {
     width: 50%;
 }
 
-.banner-image {
-    position: relative;
-}
-
 .banner-image img {
     width: 70%;
-    position: absolute;
-    bottom: 0;
-    padding-left: 100px;
+    margin-top: 110px;
 }
 
 .intro {
@@ -58,6 +52,37 @@ body {
     font-size: 15px;
     font-weight: 800;
 }
+
+/* Animation/Transition */
+
+@keyframes color-change {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: rgb(255, 0, 234);
+    }
+
+    50% {
+        background-color: rgb(61, 42, 165);
+    }
+
+    75% {
+        background-color: rgb(43, 168, 226);
+    }
+
+    100% {
+        background-color: rgb(255, 136, 0);
+    }
+}
+
+.header-container:hover .live-button {
+    animation: color-change 20s linear infinite alternate;
+    animation-play-state: running;
+}
+
+
 
 /* -------------
 ------Main Section Styles------
@@ -91,6 +116,11 @@ body {
 #hover-button {
     background-color: red;
     color: white;
+}
+
+.menu a button:hover {
+    background-color: red;
+    cursor: pointer;
 }
 
 .blog-image {
@@ -185,12 +215,70 @@ footer a {
 
 /* For Mobile Devices */
 @media screen and (max-width: 480px) {
+    body {
+        max-width: 100vw;
+    }
+
+    .header-container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-image img {
+        margin-top: 30px;
+        margin-left: 60px;
+    }
+
+    .half-width {
+        width: 100%;
+    }
+
+    .intro {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro h1 {
+        font-size: 45px;
+        text-align: center;
+    }
+
     .overflow {
         width: 200px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu {
+        background-color: white;
+        width: 100%;
+    }
+
+    .blogs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-menu {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 /* For Tablets */

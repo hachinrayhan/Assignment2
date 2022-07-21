@@ -93,6 +93,11 @@ body {
     color: white;
 }
 
+.menu a button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
 .matches {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,21 +172,3 @@ footer a {
 
     color: rgb(22, 180, 243);
 }
-
-
-/* -------------
-------media queries styles------
-------------- */
-
-/* For Mobile Devices */
-@media screen and (max-width: 480px) {
-    .overflow {
-        width: 200px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-/* For Tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {}
